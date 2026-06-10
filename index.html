@@ -15,18 +15,16 @@ scroll-behavior:smooth;
 }
 
 body{
-    background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url('https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1920');
-    
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    
-    color: white;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#000000,#081b33,#0d2b52);
+    color:white;
 }
 
+.hero::before{
+    content:"📈";
+    position:absolute;
+    font-size:200px;
+    opacity:0.08;
+}
 header{
 display:flex;
 justify-content:space-between;
