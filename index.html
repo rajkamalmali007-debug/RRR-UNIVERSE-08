@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,194 +7,213 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-<img src="Picsart_25-10-04_13-12-25-926.jpg" width="200">
-body{
-    background: linear-gradient(135deg,#000000,#0f172a,#1e293b);
-    color:white;
-    font-family:Arial,sans-serif
-    background:#0a0a0a
-    color:#FFD700;}
-header{
-    background:#111;
-    color:dark blue;
-    padding:20px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
-.logo{Picsart_25-10-04_13-12-25-926.jpg
-    font-size:28px;
-    font-weight:bold;
+body{
+background:linear-gradient(135deg,#000000,#0f172a,#111827);
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.8);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
 .hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
-    background-size:cover;
-    color:white;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero h1{
-    font-size:60px;
+font-size:60px;
+color:#FFD700;
+margin-bottom:15px;
 }
 
 .hero p{
-    margin-top:15px;
-    font-size:20px;
+max-width:700px;
+font-size:18px;
+line-height:1.8;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#007bff;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#FFD700;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
 }
 
 section{
-    padding:80px 10%;
+padding:80px 10%;
 }
 
 h2{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+color:#FFD700;
+margin-bottom:30px;
 }
 
-.services,
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.about{
+text-align:center;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    background:dark blue;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    text-align:center;
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
 }
 
-.gallery img{IMG_20251004_131612_466
-    width:100%;
-    border-radius:10px;
-}
-
-.about{ the rrr universe is a treding platform for every treder 
-    text-align:center;
-    max-width:800px;
-    margin:auto;
+.contact{
+text-align:center;
 }
 
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:20px;
+text-align:center;
+padding:20px;
+background:black;
+margin-top:50px;
 }
 </style>
 </head>
 
-<body{
-background:black;
-color:white;
-font-family:Arial;
-}>
+<body>
 
 <header>
-    <div class="logo">RRR Universe</div>
+<div class="logo">RRR Universe</div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-    </nav>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#mission">Mission</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero" id="home">
-    <div>
-        <h1>Welcome To RRR Universe</h1>
-        <p>Dream • Create • Inspire</p>
-        <a href="#about" class="btn">Know More</a>
-    </div>
-</section>
 
-<section id="services">
-    <h2>My Services</h2>
+<h1>RRR Universe</h1>
 
-    <div class="services">
+<p>
+Learn • Trade • Grow Together
+</p>
 
-        <div class="card">
-            <h3>Content Creation</h3>
-            <p>Professional reels, content and creative ideas.</p>
-        </div>
+<p style="margin-top:15px;">
+A community built for new traders who want to learn,
+connect, share ideas and grow together in the financial markets.
+</p>
 
-        <div class="card">
-            <h3>Digital Branding</h3>
-            <p>Build your personal identity online.</p>
-        </div>
+<a class="btn"
+href="https://instagram.com/rrr_universe_"
+target="_blank">
+Join Community
+</a>
 
-        <div class="card">
-            <h3>Creative Design</h3>
-            <p>Modern and professional visual content.</p>
-        </div>
-
-    </div>
-</section>
-
-<section id="gallery">
-    <h2>Gallery</h2>
-
-    <div class="gallery">
-
-        <img src=1000311903.jpg
-
-
-        <img src="https://picsum.photos/400/300?2">
-
-        <img src="https://picsum.photos/400/300?3">
-
-    </div>
 </section>
 
 <section id="about">
-    <h2>About Me</h2>
 
-  <a href="https://instagram.com/rrr_universe_">
-Instagram
-  </a>  <div class="about">
-        <p>
-            Welcome to RRR Universe.
-            created this platform to connect with passionate traders,
-            share knowledge, exchange ideas, and grow together in the 
-            financial markets. My goal is to build a strong community
-            where learning and success go hand in hand. :::
-        </p>
-    </div>
+<h2>About Us</h2>
+
+<div class="about">
+
+<p>
+RRR Universe is a growing community created to connect new traders.
+Our goal is to help beginners learn trading, share knowledge,
+exchange ideas and build confidence together.
+</p>
+
+</div>
+
+</section>
+
+<section id="mission">
+
+<h2>Our Mission</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Learn</h3>
+<p>Understand trading fundamentals and market psychology.</p>
+</div>
+
+<div class="card">
+<h3>Connect</h3>
+<p>Meet like-minded traders and share experiences.</p>
+</div>
+
+<div class="card">
+<h3>Grow</h3>
+<p>Improve skills through continuous learning and discipline.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Join Our Community</h2>
+
+<div class="contact">
+
+<p>Instagram: @rrr_universe_</p>
+
+<br>
+
+<a class="btn"
+href="https://instagram.com/rrr_universe_"
+target="_blank">
+Follow on Instagram
+</a>
+
+</div>
+
 </section>
 
 <footer>
-    © 2026 RRR Universe | All Rights Reserved
+© 2026 RRR Universe | Trading Community
 </footer>
 
 </body>
