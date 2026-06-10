@@ -3,133 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RRR Universe - Dashboard</title>
+<title>RRR Universe - Trading Community</title>
 
 <style>
+
+/* ===== BODY BACKGROUND (PREMIUM TRADING THEME) ===== */
 body{
     margin:0;
-    font-family:Arial;
-    background:#050505;
+    font-family:Arial, sans-serif;
     color:white;
+    overflow-x:hidden;
+
+    background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 195, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255, 215, 0, 0.12), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(0, 120, 255, 0.12), transparent 50%),
+    linear-gradient(135deg, #05070f, #0a1020, #050505);
 }
 
-/* NAV */
+/* GRID OVERLAY */
+body::before{
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size:60px 60px;
+    opacity:0.2;
+    pointer-events:none;
+}
+
+/* NAVBAR */
 nav{
     display:flex;
     justify-content:center;
     gap:20px;
     padding:15px;
     background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    padding:8px 15px;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#ffd700;
+    text-shadow:0 0 10px #ffd700;
 }
 
-/* DASHBOARD */
-h1{
+/* HERO */
+.hero{
     text-align:center;
+    padding:90px 20px;
+    position:relative;
+}
+
+.hero h1{
+    font-size:55px;
     color:#ffd700;
-    text-shadow:0 0 20px #ffd700;
-    margin-top:20px;
+    text-shadow:0 0 25px #ffd700;
+    margin:0;
 }
 
-/* PRICE BOXES */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    padding:30px;
-}
-
-.box{
-    background:rgba(255,255,255,0.05);
-    padding:20px;
-    border-left:3px solid #ffd700;
-    border-radius:10px;
-    box-shadow:0 0 15px rgba(255,215,0,0.1);
-    transition:0.3s;
-}
-
-.box:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 25px rgba(255,215,0,0.3);
-}
-
-.price{
-    font-size:22px;
-    color:#00ff99;
-}
-
-/* MINI CHART */
-.chart-bar{
-    height:40px;
-    display:flex;
-    align-items:flex-end;
-    gap:4px;
+.hero p{
+    color:#cfcfcf;
+    font-size:18px;
     margin-top:10px;
 }
 
-.bar{
-    width:6px;
+/* BUTTON */
+.btn{
+    margin-top:20px;
+    background:#ffd700;
+    color:black;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,215,0,0.6);
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ANIMATED CHART LINES */
+.chart{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    opacity:0.12;
+    z-index:-1;
+}
+
+.line{
+    position:absolute;
+    bottom:0;
+    width:2px;
     background:linear-gradient(#00c3ff,#ffd700);
-    animation:updown 1.2s infinite ease-in-out;
+    animation:move 1.8s infinite ease-in-out;
 }
 
-.bar:nth-child(1){height:20px;}
-.bar:nth-child(2){height:35px;}
-.bar:nth-child(3){height:15px;}
-.bar:nth-child(4){height:30px;}
-.bar:nth-child(5){height:25px;}
+.line:nth-child(1){left:10%; height:120px;}
+.line:nth-child(2){left:25%; height:220px;}
+.line:nth-child(3){left:40%; height:160px;}
+.line:nth-child(4){left:60%; height:260px;}
+.line:nth-child(5){left:75%; height:180px;}
 
-@keyframes updown{
+@keyframes move{
     0%,100%{transform:scaleY(0.7);}
-    50%{transform:scaleY(1.3);}
+    50%{transform:scaleY(1.2);}
 }
+
+/* CARDS */
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    width:260px;
+    border-left:3px solid #ffd700;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(255,215,0,0.2);
+}
+
 </style>
 
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <a href="index.html">Home</a>
-<a href="dashboard.html">Dashboard</a>
 <a href="community.html">Community</a>
+<a href="dashboard.html">Dashboard</a>
 <a href="contact.html">Contact</a>
 </nav>
 
-<h1>📊 Trading Dashboard</h1>
+<!-- HERO -->
+<div class="hero">
 
-<div class="grid">
-
-<div class="box">
-<h3>Bitcoin (BTC)</h3>
-<p class="price">$67,450</p>
-<div class="chart-bar">
-<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
-</div>
-</div>
-
-<div class="box">
-<h3>Ethereum (ETH)</h3>
-<p class="price">$3,120</p>
-<div class="chart-bar">
-<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
-</div>
+<div class="chart">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
 </div>
 
-<div class="box">
-<h3>NIFTY 50</h3>
-<p class="price">22,180</p>
-<div class="chart-bar">
-<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+<h1>RRR Universe</h1>
+<p>Premium Trading Community for Beginners & Pro Traders 📈</p>
+
+<button class="btn" onclick="window.location.href='community.html'">
+Join Community
+</button>
+
 </div>
+
+<!-- CARDS -->
+<div class="container">
+
+<div class="card">
+<h3>📊 Market Learning</h3>
+<p>Trading basics to advanced strategies in simple way.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Real Skills</h3>
+<p>Price action, psychology and smart money concepts.</p>
+</div>
+
+<div class="card">
+<h3>🔥 Community Growth</h3>
+<p>Learn and grow with active traders community.</p>
 </div>
 
 </div>
