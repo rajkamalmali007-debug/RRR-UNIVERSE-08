@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RRR Universe - Community</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+
+    /* Trading premium background */
+    background: radial-gradient(circle at top,
+    #0a1f44 0%,
+    #050505 55%,
+    #000000 100%);
+}
+
+/* Top Header */
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:40px;
+    color:#ffd700;
+    letter-spacing:2px;
+}
+
+header p{
+    color:#aaa;
+}
+
+/* Navigation */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 15px;
+    border:1px solid transparent;
+}
+
+nav a:hover{
+    border:1px solid #ffd700;
+    color:#ffd700;
+}
+
+/* Sections */
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    margin:20px 0;
+    border-left:3px solid #ffd700;
+    border-radius:10px;
+}
+
+button{
+    background:#ffd700;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#e6c200;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>RRR Universe Community</h1>
+    <p>Ek premium trading community jahan beginners se pro traders tak sab grow karte hain 📈</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="community.html">Community</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🔥 Welcome Traders</h2>
+        <p>Yahan aapko trading knowledge, market analysis aur real-time learning milti hai.</p>
+    </div>
+
+    <div class="card">
+        <h2>📊 What We Provide</h2>
+        <p>- Trading Basics<br>
+           - Market Updates<br>
+           - Strategy Learning<br>
+           - Psychology of Trading</p>
+    </div>
+
+    <div class="card">
+        <h2>⚡ Community Rules</h2>
+        <p>Respect everyone, no fake signals, aur learning mindset rakho.</p>
+    </div>
+
+    <div class="card" style="text-align:center;">
+        <h2>🚀 Join Us Now</h2>
+        <p>Instagram pe join karo aur community ka part bano</p>
+        <button onclick="window.location.href='https://instagram.com/rrr_universe_'">
+            Join Instagram
+        </button>
+    </div>
+
+</div>
+
+</body>
+</html>
